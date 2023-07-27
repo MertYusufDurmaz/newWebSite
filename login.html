@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Sayfası</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Giriş Yap</h2>
+    <form id="login-form" action="index.html" method="get"></form>>
+      <div class="input-group">
+        <label for="username">Kullanıcı Adı</label>
+        <input type="text" id="username" placeholder="Kullanıcı Adı" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Şifre</label>
+        <input type="password" id="password" placeholder="Şifre" required>
+      </div>
+      <button type="submit" onclick="login()" >Giriş</button>
+      <div class="bottom-text">
+        <span>Hesabınız yok mu? <a href="#">Kaydolun</a></span>
+        <span><a href="#">Şifrenizi mi unuttunuz?</a></span>
+      </div>
+    </form>
+  </div>
+  <script>
+    function login() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Kullanıcı adı ve şifreyi doğrulama işlemleri burada yapılacak
+      // Örneğin, burada AJAX veya başka bir yöntemle sunucuya doğrulama isteği gönderebilirsiniz
+
+      // Başarılı giriş durumunda başka bir sayfaya yönlendirme
+      if (username === "ADMİN" && password === "123") {
+        window.location.href = "index.html";
+      } else {
+        alert("Geçersiz kullanıcı adı veya şifre");
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+      }
+    }
+  </script>
+</body>
+</html>
+</body>
+</html>
